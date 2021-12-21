@@ -26,7 +26,7 @@ void MyHook::InstallHook(){
 		printf_s("Error: %x \n", GetLastError());
 	}
 
-	if (!(keyboardhook == SetWindowsHookEx(WH_KEYBOARD_LL, MyKeyBoardCallback, NULL, 0)))
+	if (!(keyboardhook = SetWindowsHookEx(WH_KEYBOARD_LL, MyKeyBoardCallback, NULL, 0)))
 	{
 		printf_s("Error: %x \n", GetLastError());
 	}
